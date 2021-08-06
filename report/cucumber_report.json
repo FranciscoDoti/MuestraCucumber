@@ -1,0 +1,191 @@
+[
+  {
+    "description": "    Vamos a hacer pruebas sobre el login de Trello",
+    "keyword": "Feature",
+    "name": "Pruebas sobre el login",
+    "line": 2,
+    "id": "pruebas-sobre-el-login",
+    "tags": [
+      {
+        "name": "@Login",
+        "line": 1
+      }
+    ],
+    "uri": "features\\tests\\login.feature",
+    "elements": [
+      {
+        "id": "pruebas-sobre-el-login;login-exitoso",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Login exitoso",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Abro el navegador en la pagina de Trello",
+            "match": {
+              "location": "features\\steps\\login.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13770000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Me logueo con mi usuario \"franciscodotitexeira@gmail.com\" y contraseña \"Yosoyyo123!\"",
+            "match": {
+              "location": "features\\steps\\login.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7420000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "verifico que el login haya sido exitoso",
+            "match": {
+              "location": "features\\steps\\login.js:39"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 17000000,
+              "error_message": "NoSuchElementError: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[contains(@title,\"Francisco\")]\"}\n  (Session info: chrome=92.0.4515.107)\n    at Object.throwDecodedError (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\error.js:517:15)\n    at parseHttpResponse (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\http.js:642:13)\n    at Executor.execute (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\http.js:568:28)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)\n    at async Driver.execute (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:731:17)\n    at async toWireValue (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:139:15)\n    at async C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:189:16\n    at async forEachKey (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:183:9)\n    at async convertKeys (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:188:3)\n    at async Driver.execute (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\node_modules\\selenium-webdriver\\lib\\webdriver.js:729:22)\n    at async World.<anonymous> (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\features\\steps\\login.js:40:35)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pruebas-sobre-el-login;login-fallido",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Login Fallido",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          },
+          {
+            "name": "@LoginFallido",
+            "line": 14
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Abro el navegador en la pagina de Trello",
+            "match": {
+              "location": "features\\steps\\login.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11468000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "Me logueo con mi usuario \"franciscodotitexeira@gmail.com\" y contraseña \"ContraseñaTrucha\"",
+            "match": {
+              "location": "features\\steps\\login.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10300000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "verifico que el login haya sido fallido",
+            "match": {
+              "location": "features\\steps\\login.js:32"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 47000000,
+              "error_message": "AssertionError: Se esperaba que textoCartelError sea igual a Direccion de correo electrónico o bla bla bla. Se encontró:  \n              Su navegador no ha podido cargar todos los recursos de Trello. Es posible que la configuración de su firewall, proxy o navegador los haya bloqueado.\n              Pruebe a cargar de nuevo la página y, si no funciona, consulte nuestra guía de resolución de problemas.\n : expected false to be true\n    + expected - actual\n\n    -false\n    +true\n\n    at World.<anonymous> (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\features\\steps\\login.js:35:16)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "pruebas-sobre-el-login;login-usando-todo-en-mayusculas",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Login usando todo en mayusculas",
+        "tags": [
+          {
+            "name": "@Login",
+            "line": 1
+          },
+          {
+            "name": "@LoginFallido",
+            "line": 19
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "Abro el navegador en la pagina de Trello",
+            "match": {
+              "location": "features\\steps\\login.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11458000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "Me logueo con mi usuario \"FRANCISCODOTTIEXEIRA@GMAIL.COM\" y contraseña \"YOSOYYO123!\"",
+            "match": {
+              "location": "features\\steps\\login.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7426000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "verifico que el login haya sido fallido",
+            "match": {
+              "location": "features\\steps\\login.js:32"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 36000000,
+              "error_message": "AssertionError: Se esperaba que textoCartelError sea igual a Direccion de correo electrónico o bla bla bla. Se encontró:  \n              Su navegador no ha podido cargar todos los recursos de Trello. Es posible que la configuración de su firewall, proxy o navegador los haya bloqueado.\n              Pruebe a cargar de nuevo la página y, si no funciona, consulte nuestra guía de resolución de problemas.\n : expected false to be true\n    + expected - actual\n\n    -false\n    +true\n\n    at World.<anonymous> (C:\\Users\\francisco.dotitexeir\\pruebaSelenium\\features\\steps\\login.js:35:16)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
