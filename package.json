@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js -f json:report/cucumber_report.json"
+    "test": "cucumber-js -f json:report/cucumber_report.json",
+    "featureLogin":  "cucumber-js features/tests/login.feature -f json:report/cucumber_report.json"
   },
   "author": "Francisco Doti Texeira",
   "license": "ISC",
